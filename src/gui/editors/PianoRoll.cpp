@@ -1488,6 +1488,7 @@ void PianoRoll::keyPressEvent(QKeyEvent* ke)
 
 		case Qt::Key_Home:
 			m_timeLine->timeline()->setTicks(0);
+			Engine::getSong()->setPlayPos(0, Song::PlayMode::None);
 			ke->accept();
 			break;
 
